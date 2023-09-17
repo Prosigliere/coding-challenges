@@ -8,8 +8,6 @@ Use the Harry Potter API to get a list of characters and spells.
 
 API: [Harry Potter API](https://hp-api.onrender.com/)
 
-Character JSON: [http://hp-api.herokuapp.com/api/characters](http://hp-api.herokuapp.com/api/characters)
-
 ## Requirements
 
 Language: React, use Typescript if possible
