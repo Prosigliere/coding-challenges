@@ -18,23 +18,17 @@ The app should have a view to display the list of all characters, all students, 
 
 The user should be able to select a character to go to a details page for the character
 
-The app should also show a list of all spells
-
-The user should be able to select a spell to go to a details page for the spell
-
 The app should have a clear way to navigate between views
 
-A user should be able to favorite characters and spells
+A user should be able to favorite characters
 
 The user should be able to set their preferred house (Gryffindor, Slytherin, Hufflepuff, Ravenclaw)
-
-Add a filter to the list views
 
 The app should make use of colors and fonts that make aesthetic sense
 
 ## Time constraint
 
-Try to keep your development to around 8 hours.  We want to see your work, but we also don’t want to take up a ton of your time.  Use judgement on what will help showcase your skills appropriately. 
+Try to keep your development to around 4 hours.  We want to see your work, but we also don’t want to take up a ton of your time.  Use judgement on what will help showcase your skills appropriately. 
 
 If you run out of time, it is okay to not implement all of the requested features in the challenge
 
