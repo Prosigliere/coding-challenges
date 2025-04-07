@@ -6,6 +6,7 @@ This challenge requires you to develop a model that can detect falls from time-s
 
 ## Dataset
 
+You can download the full dataset here [https://drive.google.com/drive/folders/1Rr5eI8btUAKqDjmDc2vxRyu0C0yRX1Xl](https://drive.google.com/drive/folders/1Rr5eI8btUAKqDjmDc2vxRyu0C0yRX1Xl).  Note: You don't have to train on all of the data if you don't need to.  
 The dataset used in this challenge is designed for benchmarking fall detection and prediction algorithms. It includes data from APDM Opal IMU sensors at the following body locations:
 
 * Right ankle
