@@ -150,10 +150,6 @@ The evaluation will be based on the following criteria:
 * Provide clear instructions on how to run your code.
 * Include all necessary dependencies and requirements.
 
-##   Timeline
-
-* \[Specify the timeframe for the challenge, e.g., "You have one week to complete this challenge."\]
-
 ##   Contact
 
-* \[Specify a point of contact for questions or clarifications.\]
+* Please reach out to Wes Goldwater, [wes@prosigliere.com](mailto:wes@prosigliere.com), with any questions
