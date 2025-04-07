@@ -15,7 +15,7 @@ The dataset used in this challenge is designed for benchmarking fall detection a
 * Left thigh
 * Head
 * Sternum
-* Waist [cite: 1]
+* Waist
 
 ###   Data Description
 
@@ -25,7 +25,7 @@ The dataset used in this challenge is designed for benchmarking fall detection a
 * The experiment environment was designed to simulate realistic activity primitives.
 * Fall and near-fall trials were conducted on a 30-cm-thick gymnasium mattress with a 13-cm top layer of high-density ethylene vinyl acetate foam to ensure safety.
 * Subjects were trained with representative videos for fall events.
-* Near-fall and ADL events were performed without video guidance, with instructions to simulate scenarios involving frailer older adults. [cite: 2, 3, 4, 5, 6, 7, 8]
+* Near-fall and ADL events were performed without video guidance, with instructions to simulate scenarios involving frailer older adults.
 
 ###   Folder Structure
 
@@ -33,7 +33,7 @@ The dataset is organized as follows:
 
 * Each folder (e.g., `sub1`, `sub2`, ..., `sub8`) corresponds to one subject.
 * Each subfolder (e.g., `ADLs`, `Falls`, `Near_Falls`) corresponds to the type of trial.
-* Each file (`.xlsx`) contains sensor data for a single trial. [cite: 9, 10]
+* Each file (`.xlsx`) contains sensor data for a single trial.
 
 ###   Data Columns
 
@@ -102,11 +102,11 @@ Each data file includes the following columns:
 * `waist Angular Velocity Z (rad/s)`: Waist angular velocity along the Z-axis
 * `waist Magnetic Field X (uT)`: Waist magnetic field along the X-axis
 * `waist Magnetic Field Y (uT)`: Waist magnetic field along the Y-axis
-* `waist Magnetic Field Z (uT)`: Waist magnetic field along the Z-axis [cite: 11, 12, 13, 14, 15, 16, 17, 18, 19]
+* `waist Magnetic Field Z (uT)`: Waist magnetic field along the Z-axis
 
 ###   Notes
 
-* Magnetic field data from the sternum and waist sensors may be noisier than data from other sensors. [cite: 20]
+* Magnetic field data from the sternum and waist sensors may be noisier than data from other sensors.
 
 ##   Challenge Tasks
 
