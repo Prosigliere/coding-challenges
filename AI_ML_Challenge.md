@@ -126,15 +126,6 @@ Each data file includes the following columns:
     * Pay close attention to class imbalance (if present) and choose metrics accordingly.
     * Provide a clear explanation of the model's performance.
 
-4.  **Reporting:**
-    * Document your code clearly.
-    * Provide a report summarizing your approach, including:
-        * Data preprocessing steps
-        * Model architecture and justification
-        * Evaluation metrics and results
-        * Any challenges encountered and how you addressed them
-        * Suggestions for improvement
-
 ##   Evaluation Criteria
 
 The evaluation will be based on the following criteria:
