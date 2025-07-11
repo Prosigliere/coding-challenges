@@ -16,6 +16,8 @@ Database: Use any SQL database (MySQL, PostgreSQL, SQLite, etc)
 
 Product Entity: A product in the ecommerce context should at least have name, picture, price, and a list of up to 10 attributes (e.g color, size, material, etc). 
 
+Create a Docker Compose for running the solution.
+
 ## Views 
 
 Product Show View:
