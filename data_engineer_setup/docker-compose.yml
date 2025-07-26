@@ -1,0 +1,105 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database 1 - Orders, Customers, Order Items
+  postgres_db1:
+    image: postgres:15
+    container_name: ecommerce_db1
+    environment:
+      POSTGRES_DB: ecommerce_orders
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_db1_data:/var/lib/postgresql/data
+      - ./database/init_db1.sql:/docker-entrypoint-initdb.d/init_db1.sql
+    networks:
+      - data_pipeline
+
+  # PostgreSQL Database 2 - Product Descriptions
+  postgres_db2:
+    image: postgres:15
+    container_name: ecommerce_db2
+    environment:
+      POSTGRES_DB: ecommerce_products
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_db2_data:/var/lib/postgresql/data
+      - ./database/init_db2.sql:/docker-entrypoint-initdb.d/init_db2.sql
+    networks:
+      - data_pipeline
+
+  # PostgreSQL Data Warehouse
+  postgres_warehouse:
+    image: postgres:15
+    container_name: data_warehouse
+    environment:
+      POSTGRES_DB: data_warehouse
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_warehouse_data:/var/lib/postgresql/data
+      - ./database/init_warehouse.sql:/docker-entrypoint-initdb.d/init_warehouse.sql
+    networks:
+      - data_pipeline
+
+  # Apache Airflow
+  airflow-webserver:
+    image: apache/airflow:2.7.0
+    container_name: airflow_webserver
+    depends_on:
+      - postgres_db1
+      - postgres_db2
+      - postgres_warehouse
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:postgres@postgres_warehouse:5432/data_warehouse
+      AIRFLOW__CORE__FERNET_KEY: 'your-fernet-key-here-replace-in-production'
+      AIRFLOW__WEBSERVER__DEFAULT_USER_USERNAME: admin
+      AIRFLOW__WEBSERVER__DEFAULT_USER_PASSWORD: admin
+      AIRFLOW__WEBSERVER__DEFAULT_USER_FIRSTNAME: Admin
+      AIRFLOW__WEBSERVER__DEFAULT_USER_LASTNAME: User
+      AIRFLOW__WEBSERVER__DEFAULT_USER_EMAIL: admin@example.com
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+    ports:
+      - "8080:8080"
+    command: webserver
+    networks:
+      - data_pipeline
+
+  airflow-scheduler:
+    image: apache/airflow:2.7.0
+    container_name: airflow_scheduler
+    depends_on:
+      - airflow-webserver
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:postgres@postgres_warehouse:5432/data_warehouse
+      AIRFLOW__CORE__FERNET_KEY: 'your-fernet-key-here-replace-in-production'
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+    command: scheduler
+    networks:
+      - data_pipeline
+
+volumes:
+  postgres_db1_data:
+  postgres_db2_data:
+  postgres_warehouse_data:
+
+networks:
+  data_pipeline:
+    driver: bridge

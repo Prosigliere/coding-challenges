@@ -1,0 +1,27 @@
+# Python dependencies for the data engineering challenge
+# Candidates can install these packages in their Airflow environment
+
+# Database connectivity
+psycopg2-binary==2.9.7
+sqlalchemy==2.0.21
+
+# Data processing
+pandas==2.1.1
+numpy==1.24.3
+
+# HTTP requests for API calls
+requests==2.31.0
+
+# Data validation and quality
+great-expectations==0.17.23
+
+# Airflow providers (if needed)
+apache-airflow-providers-postgres==5.6.0
+
+# Utilities
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Optional: Data visualization for exploration
+matplotlib==3.7.2
+seaborn==0.12.2
