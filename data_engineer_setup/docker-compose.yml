@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # PostgreSQL Database 1 - Orders, Customers, Order Items
   postgres_db1:
@@ -16,6 +14,11 @@ services:
       - ./database/init_db1.sql:/docker-entrypoint-initdb.d/init_db1.sql
     networks:
       - data_pipeline
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   # PostgreSQL Database 2 - Product Descriptions
   postgres_db2:
@@ -32,6 +35,11 @@ services:
       - ./database/init_db2.sql:/docker-entrypoint-initdb.d/init_db2.sql
     networks:
       - data_pipeline
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   # PostgreSQL Data Warehouse
   postgres_warehouse:
@@ -48,24 +56,55 @@ services:
       - ./database/init_warehouse.sql:/docker-entrypoint-initdb.d/init_warehouse.sql
     networks:
       - data_pipeline
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
-  # Apache Airflow
-  airflow-webserver:
+  # Airflow Database Initialization
+  airflow-init:
     image: apache/airflow:2.7.0
-    container_name: airflow_webserver
+    container_name: airflow_init
+    user: "50000:0"
     depends_on:
-      - postgres_db1
-      - postgres_db2
-      - postgres_warehouse
+      postgres_warehouse:
+        condition: service_healthy
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:postgres@postgres_warehouse:5432/data_warehouse
-      AIRFLOW__CORE__FERNET_KEY: 'your-fernet-key-here-replace-in-production'
-      AIRFLOW__WEBSERVER__DEFAULT_USER_USERNAME: admin
-      AIRFLOW__WEBSERVER__DEFAULT_USER_PASSWORD: admin
-      AIRFLOW__WEBSERVER__DEFAULT_USER_FIRSTNAME: Admin
-      AIRFLOW__WEBSERVER__DEFAULT_USER_LASTNAME: User
-      AIRFLOW__WEBSERVER__DEFAULT_USER_EMAIL: admin@example.com
+      AIRFLOW__CORE__FERNET_KEY: 'lK2NzOG26X7GGNnUjEEqZwzJJmXJ3CyushGRI6qjMmY='
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      _AIRFLOW_DB_MIGRATE: 'true'
+      _AIRFLOW_WWW_USER_CREATE: 'true'
+      _AIRFLOW_WWW_USER_USERNAME: admin
+      _AIRFLOW_WWW_USER_PASSWORD: admin
+      _AIRFLOW_WWW_USER_FIRSTNAME: Admin
+      _AIRFLOW_WWW_USER_LASTNAME: User
+      _AIRFLOW_WWW_USER_EMAIL: admin@example.com
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+    command: >
+      bash -c "
+        airflow db init &&
+        airflow users create --username admin --firstname Admin --lastname User --role Admin --email admin@example.com --password admin
+      "
+    networks:
+      - data_pipeline
+
+  # Apache Airflow Webserver
+  airflow-webserver:
+    image: apache/airflow:2.7.0
+    container_name: airflow_webserver
+    user: "50000:0"
+    depends_on:
+      - airflow-init
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:postgres@postgres_warehouse:5432/data_warehouse
+      AIRFLOW__CORE__FERNET_KEY: 'lK2NzOG26X7GGNnUjEEqZwzJJmXJ3CyushGRI6qjMmY='
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     volumes:
       - ./airflow/dags:/opt/airflow/dags
@@ -76,16 +115,23 @@ services:
     command: webserver
     networks:
       - data_pipeline
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
+  # Apache Airflow Scheduler
   airflow-scheduler:
     image: apache/airflow:2.7.0
     container_name: airflow_scheduler
+    user: "50000:0"
     depends_on:
-      - airflow-webserver
+      - airflow-init
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:postgres@postgres_warehouse:5432/data_warehouse
-      AIRFLOW__CORE__FERNET_KEY: 'your-fernet-key-here-replace-in-production'
+      AIRFLOW__CORE__FERNET_KEY: 'lK2NzOG26X7GGNnUjEEqZwzJJmXJ3CyushGRI6qjMmY='
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     volumes:
       - ./airflow/dags:/opt/airflow/dags
