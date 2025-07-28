@@ -21,7 +21,7 @@ Your task is to:
 
 ## Technical Setup
 
-- Clone the following GitHub repository: ""
+- Fork the following GitHub repository: https://github.com/Prosigliere/data-engineer-challenge-codebase
 - Running the included docker-compose.yml file will provision [You'll have specific instructions in the Repository's Readme]:
 	- 3 PostgreSQL containers
 	- 1 Apache Airflow instance
