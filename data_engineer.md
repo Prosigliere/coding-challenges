@@ -19,9 +19,17 @@ Your task is to:
 2. Develop the necessary ETL pipeline in Python, implemented as an Airflow DAG, to extract, transform, and load the data into the Data Warehouse.
 3. We would love to see a mockup (e.g., in Figma, PowerPoint, Miro, Lucidchart, etc.) illustrating how you would visualize the results in a dashboard.
 
+## Deliverable Assets
+
+- A SQL file that creates the structure of the DataWarehouse tables needed for solving the challenge at the Warehouse.
+- A working Python script integrated with Airflow having the transformation pipeline running as expected given the codebase.
+- A report or mockup about outlining the answers of the key business questions.
+- Brief explanation about the thought process into a file named design_process.md .
+
+
 ## Technical Setup
 
-- Fork the following GitHub repository: https://github.com/Prosigliere/data-engineer-challenge-codebase
+- Fork the following GitHub repository: https://github.com/Prosigliere/data-engineer-challenge
 - Running the included docker-compose.yml file will provision [You'll have specific instructions in the Repository's Readme]:
 	- 3 PostgreSQL containers
 	- 1 Apache Airflow instance
@@ -54,7 +62,7 @@ We will assess your submission based on:
 - Code quality and structure
 - Proper use of Airflow (DAGs, tasks, operators)
 - Clarity of transformation logic
-- Thoughtfulness of the proposed dashboard mockup (if submitted)
+- Thoughtfulness of the proposed dashboard mockup 
 - Documentation and overall communication
 
 ## How to Submit
