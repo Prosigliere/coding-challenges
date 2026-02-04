@@ -1,0 +1,55 @@
+# Spells Flow (Optional Feature)
+# Tests the spells view functionality if implemented
+
+appId: ${ANDROID_APP_ID}
+name: "View Spells"
+tags:
+  - spells
+  - optional
+
+---
+
+# Launch the app
+- launchApp
+
+# Wait for the app to load
+- extendedWaitUntil:
+    visible: "Characters"
+    timeout: 10000
+
+# Navigate to Spells section (if available)
+- tapOn:
+    text: "Spells"
+    optional: true
+
+- tapOn:
+    id: "nav_spells"
+    optional: true
+
+# Wait for spells list to load
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+# Scroll through the spells list
+- scroll:
+    direction: DOWN
+
+# Take screenshot of spells view
+- takeScreenshot: "spells_view"
+
+# Tap on a spell to view details (if detail view exists)
+- tapOn:
+    index: 0
+    optional: true
+
+# Wait for spell detail
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 3000
+
+# Take screenshot of spell detail
+- takeScreenshot: "spell_detail"
+
+# Navigate back
+- back

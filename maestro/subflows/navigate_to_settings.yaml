@@ -1,0 +1,25 @@
+# Navigate to Settings Subflow
+# Reusable subflow for navigating to the settings screen
+
+appId: ${ANDROID_APP_ID}
+name: "Navigate to Settings"
+
+---
+
+# Navigate to Settings/Profile section
+- tapOn:
+    text: "Settings"
+    optional: true
+
+- tapOn:
+    text: "Profile"
+    optional: true
+
+- tapOn:
+    id: "nav_settings"
+    optional: true
+
+# Wait for settings to load
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000

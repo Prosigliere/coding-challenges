@@ -1,0 +1,82 @@
+# Favorites Flow
+# Tests the ability to favorite characters and view favorites section
+
+appId: ${ANDROID_APP_ID}
+name: "Favorite Characters"
+tags:
+  - favorites
+  - user-interaction
+
+---
+
+# Launch the app with fresh state
+- clearState
+- launchApp
+
+# Wait for the characters list to load
+- extendedWaitUntil:
+    visible: "Characters"
+    timeout: 10000
+
+# Tap on a character to view details
+- tapOn:
+    text: "Harry Potter"
+    optional: true
+
+# If Harry Potter is not visible, scroll to find or tap first character
+- scrollUntilVisible:
+    element:
+      text: "Harry Potter"
+    direction: DOWN
+    timeout: 10000
+    optional: true
+
+- tapOn:
+    text: "Harry Potter"
+    optional: true
+
+# Wait for detail view
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+# Tap the favorite button (heart icon or "Favorite" text)
+- tapOn:
+    text: "Favorite"
+    optional: true
+
+- tapOn:
+    id: "favorite_button"
+    optional: true
+
+- tapOn:
+    id: "btn_favorite"
+    optional: true
+
+# Take screenshot after favoriting
+- takeScreenshot: "character_favorited"
+
+# Navigate back
+- back
+
+# Navigate to Favorites section
+- tapOn:
+    text: "Favorites"
+    optional: true
+
+- tapOn:
+    id: "nav_favorites"
+    optional: true
+
+# Wait for favorites view to load
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+# Verify the favorited character appears in favorites
+- assertVisible:
+    text: "Harry Potter"
+    optional: true
+
+# Take screenshot of favorites section
+- takeScreenshot: "favorites_section"

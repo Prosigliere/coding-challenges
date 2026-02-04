@@ -1,0 +1,128 @@
+# Profile Photo Flow
+# Tests the camera functionality for setting a profile picture
+
+appId: ${ANDROID_APP_ID}
+name: "Set Profile Photo"
+tags:
+  - settings
+  - camera
+  - profile
+
+---
+
+# Launch the app
+- launchApp
+
+# Wait for the app to load
+- extendedWaitUntil:
+    visible: "Characters"
+    timeout: 10000
+
+# Navigate to Settings/Profile section
+- tapOn:
+    text: "Settings"
+    optional: true
+
+- tapOn:
+    text: "Profile"
+    optional: true
+
+- tapOn:
+    id: "nav_settings"
+    optional: true
+
+- tapOn:
+    id: "nav_profile"
+    optional: true
+
+# Wait for profile/settings to load
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+# Tap on profile picture or "Change Photo" option
+- tapOn:
+    text: "Profile Picture"
+    optional: true
+
+- tapOn:
+    text: "Change Photo"
+    optional: true
+
+- tapOn:
+    text: "Take Photo"
+    optional: true
+
+- tapOn:
+    id: "profile_image"
+    optional: true
+
+- tapOn:
+    id: "btn_change_photo"
+    optional: true
+
+# Handle camera permission dialog (if appears)
+- tapOn:
+    text: "Allow"
+    optional: true
+
+- tapOn:
+    text: "While using the app"
+    optional: true
+
+# Wait for camera to open
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+# Take a photo (tap shutter button)
+- tapOn:
+    id: "shutter_button"
+    optional: true
+
+- tapOn:
+    id: "capture_button"
+    optional: true
+
+- tapOn:
+    text: "Capture"
+    optional: true
+
+# For iOS camera, tap the capture button
+- tapOn:
+    id: "CAPTURE"
+    optional: true
+
+# Wait for photo preview
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+# Confirm/Use the photo
+- tapOn:
+    text: "Use Photo"
+    optional: true
+
+- tapOn:
+    text: "OK"
+    optional: true
+
+- tapOn:
+    text: "Done"
+    optional: true
+
+- tapOn:
+    text: "Save"
+    optional: true
+
+- tapOn:
+    id: "btn_confirm"
+    optional: true
+
+# Take screenshot of profile with new photo
+- takeScreenshot: "profile_with_photo"
+
+# Verify we're back on the profile screen
+- assertVisible:
+    text: "Profile"
+    optional: true

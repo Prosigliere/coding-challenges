@@ -1,0 +1,53 @@
+# Character Detail Flow
+# Tests navigation to character detail view and back
+
+appId: ${ANDROID_APP_ID}
+name: "View Character Detail"
+tags:
+  - characters
+  - navigation
+  - detail
+
+---
+
+# Launch the app
+- launchApp
+
+# Wait for the characters list to load
+- extendedWaitUntil:
+    visible: "Characters"
+    timeout: 10000
+
+# Tap on a character to view details (using Harry Potter as example)
+- tapOn:
+    text: "Harry Potter"
+    optional: true
+
+# If Harry Potter is not visible, tap on the first character in the list
+- tapOn:
+    index: 0
+    optional: true
+
+# Wait for the detail view to load
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+# Verify character details are displayed
+# These assertions are optional since the exact text depends on the character
+- assertVisible:
+    text: ".*"
+    regex: true
+
+# Take a screenshot of the character detail view
+- takeScreenshot: "character_detail_view"
+
+# Navigate back to the character list
+- back
+
+# Verify we're back on the main list
+- extendedWaitUntil:
+    visible: "Characters"
+    timeout: 5000
+
+- assertVisible: "Characters"

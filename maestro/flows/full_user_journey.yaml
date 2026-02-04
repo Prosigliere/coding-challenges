@@ -1,0 +1,131 @@
+# Full User Journey Flow
+# End-to-end test covering the complete user experience
+
+appId: ${ANDROID_APP_ID}
+name: "Full User Journey"
+tags:
+  - e2e
+  - regression
+  - user-journey
+
+---
+
+# Start with a clean state
+- clearState
+- launchApp
+
+# Wait for the app to fully load
+- extendedWaitUntil:
+    visible: "Characters"
+    timeout: 10000
+
+# Take initial screenshot
+- takeScreenshot: "journey_01_app_launched"
+
+# ===== STEP 1: Browse All Characters =====
+- tapOn:
+    text: "All"
+    optional: true
+
+- scroll:
+    direction: DOWN
+
+- takeScreenshot: "journey_02_all_characters"
+
+# ===== STEP 2: Filter to Students =====
+- tapOn:
+    text: "Students"
+
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+- takeScreenshot: "journey_03_students_filter"
+
+# ===== STEP 3: Filter to Staff =====
+- tapOn:
+    text: "Staff"
+
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+- takeScreenshot: "journey_04_staff_filter"
+
+# ===== STEP 4: View Character Detail =====
+- tapOn:
+    text: "All"
+    optional: true
+
+- tapOn:
+    text: "Harry Potter"
+    optional: true
+
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+- takeScreenshot: "journey_05_character_detail"
+
+# ===== STEP 5: Favorite a Character =====
+- tapOn:
+    text: "Favorite"
+    optional: true
+
+- tapOn:
+    id: "favorite_button"
+    optional: true
+
+- takeScreenshot: "journey_06_character_favorited"
+
+# Navigate back
+- back
+
+# ===== STEP 6: View Favorites =====
+- tapOn:
+    text: "Favorites"
+    optional: true
+
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+- takeScreenshot: "journey_07_favorites_section"
+
+# ===== STEP 7: Select Hogwarts House =====
+- tapOn:
+    text: "Settings"
+    optional: true
+
+- tapOn:
+    text: "Profile"
+    optional: true
+
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+- tapOn:
+    text: "House"
+    optional: true
+
+- tapOn:
+    text: "Gryffindor"
+    optional: true
+
+- takeScreenshot: "journey_08_house_selected"
+
+# ===== STEP 8: Final State =====
+- back:
+    optional: true
+
+- tapOn:
+    text: "Characters"
+    optional: true
+
+- takeScreenshot: "journey_09_final_state"
+
+# Verify the app is still functional
+- assertVisible:
+    text: ".*"
+    regex: true

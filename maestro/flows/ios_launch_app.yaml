@@ -1,0 +1,28 @@
+# iOS Launch App Flow
+# This flow tests the basic app launch functionality specifically for iOS
+
+appId: ${IOS_APP_ID}
+name: "Launch Harry Potter App (iOS)"
+tags:
+  - smoke
+  - launch
+  - ios
+
+---
+
+# Clear any previous app state for a fresh start
+- clearState
+
+# Launch the application
+- launchApp
+
+# Wait for the app to fully load
+- extendedWaitUntil:
+    visible: "Characters"
+    timeout: 10000
+
+# Verify the main screen is displayed
+- assertVisible: "Characters"
+
+# Take a screenshot for verification
+- takeScreenshot: "ios_app_launched"

@@ -1,0 +1,44 @@
+# Maestro Configuration File
+# This configuration applies to all test flows in this project
+
+# Flow configuration
+flows:
+  - "flows/*.yaml"
+
+# Environment variables that can be used across all flows
+env:
+  # App identifiers - update these with your actual app IDs
+  ANDROID_APP_ID: "com.prosigliere.harrypotter"
+  IOS_APP_ID: "com.prosigliere.harrypotter"
+  
+  # API endpoint for the Harry Potter API
+  HP_API_BASE_URL: "https://hp-api.onrender.com"
+  
+  # Test user data
+  TEST_USER_NAME: "Test User"
+
+# Execution settings
+executionOrder:
+  continueOnFailure: false
+  flowsOrder:
+    - "flows/launch_app.yaml"
+    - "flows/view_all_characters.yaml"
+    - "flows/view_students.yaml"
+    - "flows/view_staff.yaml"
+    - "flows/character_detail.yaml"
+    - "flows/favorites.yaml"
+    - "flows/house_selection.yaml"
+    - "flows/profile_photo.yaml"
+
+# Tags for organizing tests
+tags:
+  smoke:
+    - "flows/launch_app.yaml"
+    - "flows/view_all_characters.yaml"
+  regression:
+    - "flows/*.yaml"
+  favorites:
+    - "flows/favorites.yaml"
+  settings:
+    - "flows/house_selection.yaml"
+    - "flows/profile_photo.yaml"

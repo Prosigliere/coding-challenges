@@ -1,0 +1,19 @@
+# Common Navigation Subflow
+# Reusable navigation patterns that can be included in other flows
+
+appId: ${ANDROID_APP_ID}
+name: "Common Navigation"
+
+---
+
+# This subflow provides reusable navigation commands
+# Use with: runFlow: subflows/common_navigation.yaml
+
+# Navigate to Characters tab
+- tapOn:
+    text: "Characters"
+    optional: true
+
+- tapOn:
+    id: "nav_characters"
+    optional: true
