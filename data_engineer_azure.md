@@ -69,22 +69,24 @@ decisions. Management would like to answer:
 
 ## Available Data Sources
 
-To keep this self-contained, representative **raw source data** is provided in the
+To keep this self-contained, the **raw source data** is provided in the
 [`data_engineer_azure/`](./data_engineer_azure) folder. You do **not** need to stand up any
 infrastructure — treat these as the shape and content of the upstream SQL Server databases:
 
-1. **Sales database (SQL Server)** — `orders`, `customers`, `order_items`
+1. **Sales database (SQL Server)** — `customers`, `orders`, `order_items`
    (see `source_sales.sql`).
 2. **Product database (SQL Server)** — `product_descriptions`
    (see `source_products.sql`).
 3. **Currency-conversion API** — accepts `date`, `currency_from`, `currency_to` and returns
    the conversion rate, so revenue can be normalized to a single reporting currency
-   (a small sample response is in `sample_fx_rates.json`).
+   (sample responses are in `sample_fx_rates.json`).
 
 The provided DDL includes SQL Server **system-versioned temporal tables** so you can design
-your incremental/delta strategy against a realistic source. Sample rows are included so you
-have concrete data to reason about; you may extend or make reasonable assumptions about
-columns, volumes and update frequency.
+your incremental/delta strategy against a realistic source. This is real-world operational
+data and reflects the kinds of inconsistencies you'd meet in production — part of the
+exercise is showing how your design **detects, handles and reports on data-quality issues**
+rather than silently propagating them. You may make reasonable assumptions about columns,
+volumes and update frequency.
 
 ## Time constraint
 
