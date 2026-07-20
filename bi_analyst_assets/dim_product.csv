@@ -1,0 +1,16 @@
+product_id,product_name,category,unit_cost,list_price
+1,Aurora Wireless Headphones,Electronics,38.00,89.99
+2,Nimbus Bluetooth Speaker,Electronics,22.50,59.99
+3,Vertex 4K Action Camera,Electronics,96.00,199.99
+4,Pulse Smartwatch,Electronics,61.00,149.99
+5,Lumen Desk Lamp,Home & Living,12.00,34.99
+6,Cascade Ceramic Mug Set,Home & Living,8.50,24.99
+7,Harbor Cotton Bath Towels,Home & Living,14.00,39.99
+8,Meadow Scented Candle,Home & Living,5.00,16.99
+9,Trailhead Running Shoes,Apparel,33.00,79.99
+10,Summit Fleece Jacket,Apparel,28.00,69.99
+11,Drift Cotton T-Shirt,Apparel,6.00,19.99
+12,Cobalt Denim Jeans,Apparel,21.00,54.99
+13,Sprout Organic Green Tea,Grocery,3.20,9.49
+14,Grove Cold Brew Coffee,Grocery,4.10,12.99
+15,Orchard Trail Mix,Grocery,2.80,7.99

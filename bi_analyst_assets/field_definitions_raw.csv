@@ -1,0 +1,14 @@
+source_report,field_name,definition,formula_or_source,owner
+Sales Overview,revenue,"Total money billed to customers","SUM(quantity * unit_price)",marketing
+Exec Dashboard,revenue,"Net sales after discounts","SUM(line_revenue)",finance
+Ops Weekly,net_revenue,"Revenue after discounts and returns","SUM(line_revenue) - returns",finance
+Sales Overview,aov,"Average order value","revenue / number_of_orders",marketing
+Retention Deck,aov,"Average order value per customer","revenue / number_of_customers",growth
+Exec Dashboard,active_customer,"Customer with >=1 order in period","COUNT(DISTINCT customer_id)",finance
+Retention Deck,active_customer,"Customer with >=2 orders in last 90 days","COUNT(DISTINCT customer_id) w/ 2+ orders",growth
+Ops Weekly,units_sold,"Count of order lines","COUNT(order_item_id)",ops
+Sales Overview,units_sold,"Sum of item quantities","SUM(quantity)",marketing
+Exec Dashboard,top_product,"Product with highest revenue","argmax(revenue)",finance
+Category Report,top_product,"Product with highest units sold","argmax(units_sold)",merchandising
+Retention Deck,discount_rate,"Share of revenue given away as discount","1 - SUM(line_revenue)/SUM(quantity*unit_price)",growth
+Sales Overview,discount_rate,"Average discount percent on discounted lines","AVG(discount_pct) WHERE discount_pct>0",marketing
