@@ -1,0 +1,11 @@
+{
+  "_comment": "Sample responses from the currency-conversion API. Request params: date, currency_from, currency_to. Rates convert 1 unit of currency_from into currency_to (here USD is the reporting currency).",
+  "responses": [
+    { "date": "2024-06-01", "currency_from": "GBP", "currency_to": "USD", "rate": 1.2740 },
+    { "date": "2024-06-01", "currency_from": "USD", "currency_to": "USD", "rate": 1.0000 },
+    { "date": "2024-06-02", "currency_from": "EUR", "currency_to": "USD", "rate": 1.0830 },
+    { "date": "2024-06-02", "currency_from": "JPY", "currency_to": "USD", "rate": 0.0064 },
+    { "date": "2024-06-03", "currency_from": "USD", "currency_to": "USD", "rate": 1.0000 },
+    { "date": "2024-06-05", "currency_from": "GBP", "currency_to": "USD", "rate": 1.2685 }
+  ]
+}
