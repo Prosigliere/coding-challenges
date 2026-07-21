@@ -20,6 +20,8 @@ Your task is to:
 
 Keep the scope focused — these two pillars are the core of the challenge.
 
+> **On ambiguity:** some definitions here are intentionally left open (e.g. exactly what counts toward "revenue", how to bucket a "customer segment", or what "top performer" means). Resolving that ambiguity is part of the challenge. Make a reasonable decision based on your knowledge of the requirement, document it, and be prepared to talk through the call you made in each case.
+
 ## Deliverable Assets
 
 1. **A published dashboard** — share it as a Tableau Public link, an exported `.twbx`/packaged workbook, or clear screenshots. Tableau (Cloud/Desktop/Public) is preferred, but equivalent modern BI tools (Power BI, Looker Studio, etc.) are fully accepted — we do not want tool licensing to exclude strong candidates.
