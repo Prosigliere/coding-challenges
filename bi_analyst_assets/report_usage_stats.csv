@@ -1,0 +1,10 @@
+report_name,tier,business_owner,alert_recipients,last_accessed,views_last_90d,data_source
+Executive Sales Overview,Tier 1,VP Sales,#exec-alerts,2024-06-29,412,fact_orders
+Revenue Trend Monthly,Tier 1,Finance Lead,#finance-alerts,2024-06-28,286,fact_orders
+Top Products Dashboard,Tier 2,Merchandising Lead,#merch-alerts,2024-06-27,198,fact_orders
+Customer Segment Breakdown,Tier 2,Growth Lead,#growth-alerts,2024-06-25,151,fact_orders
+Regional Sales Heatmap,Tier 3,Regional Manager,,2024-05-30,44,fact_orders
+Discount Impact Analysis,Tier 3,Marketing Analyst,,2024-04-18,12,fact_orders
+Legacy Q1 Promo Tracker,Tier 3,(vacant),,2024-02-11,3,fact_orders_snapshot_q1
+Daily Order Log (raw dump),Untiered,(unknown),,2023-12-20,0,fact_orders
+Abandoned Cart Beta,Untiered,(unknown),,2024-01-05,1,events_beta
