@@ -1,0 +1,12 @@
+{
+  "_comment": "Example responses from the currency-conversion API. Request params: date, currency_from, currency_to. 'rates' converts 1 unit of the base into the listed currency. The API only supports real ISO 4217 currencies (e.g. USD, EUR, GBP); a request for an unknown code returns an error. Use USD as the reporting currency.",
+  "endpoint": "https://api.exchangerate-api.com/v4/latest/{base_currency}",
+  "responses": [
+    { "base": "USD", "date": "2024-06-01", "rates": { "USD": 1.0, "EUR": 0.9285, "GBP": 0.7911 } },
+    { "base": "EUR", "date": "2024-06-01", "rates": { "USD": 1.0770, "EUR": 1.0, "GBP": 0.8520 } },
+    { "base": "GBP", "date": "2024-06-01", "rates": { "USD": 1.2641, "EUR": 1.1737, "GBP": 1.0 } },
+    { "base": "USD", "date": "2024-09-15", "rates": { "USD": 1.0, "EUR": 0.9042, "GBP": 0.7628 } },
+    { "base": "EUR", "date": "2024-09-15", "rates": { "USD": 1.1059, "EUR": 1.0, "GBP": 0.8436 } }
+  ],
+  "error_example": { "date": "2024-08-13", "currency_from": "XYZ", "error": "unknown currency code" }
+}
