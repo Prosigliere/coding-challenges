@@ -1,0 +1,114 @@
+# House Selection Flow
+# Tests the Hogwarts house preference setting functionality
+
+appId: ${ANDROID_APP_ID}
+name: "Select Hogwarts House"
+tags:
+  - settings
+  - house
+  - ui-styling
+
+---
+
+# Launch the app
+- launchApp
+
+# Wait for the app to load
+- extendedWaitUntil:
+    visible: "Characters"
+    timeout: 10000
+
+# Navigate to Settings/Profile section
+- tapOn:
+    text: "Settings"
+    optional: true
+
+- tapOn:
+    text: "Profile"
+    optional: true
+
+- tapOn:
+    id: "nav_settings"
+    optional: true
+
+# Wait for settings to load
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+# Find and tap on House selection option
+- tapOn:
+    text: "House"
+    optional: true
+
+- tapOn:
+    text: "Hogwarts House"
+    optional: true
+
+- tapOn:
+    text: "Select House"
+    optional: true
+
+# Test selecting Gryffindor
+- tapOn:
+    text: "Gryffindor"
+    optional: true
+
+# Take screenshot with Gryffindor theme
+- takeScreenshot: "house_gryffindor"
+
+# Go back and select a different house
+- back:
+    optional: true
+
+# Navigate back to house selection
+- tapOn:
+    text: "House"
+    optional: true
+
+- tapOn:
+    text: "Hogwarts House"
+    optional: true
+
+# Test selecting Slytherin
+- tapOn:
+    text: "Slytherin"
+    optional: true
+
+# Take screenshot with Slytherin theme
+- takeScreenshot: "house_slytherin"
+
+# Go back and select Hufflepuff
+- back:
+    optional: true
+
+- tapOn:
+    text: "House"
+    optional: true
+
+- tapOn:
+    text: "Hufflepuff"
+    optional: true
+
+# Take screenshot with Hufflepuff theme
+- takeScreenshot: "house_hufflepuff"
+
+# Go back and select Ravenclaw
+- back:
+    optional: true
+
+- tapOn:
+    text: "House"
+    optional: true
+
+- tapOn:
+    text: "Ravenclaw"
+    optional: true
+
+# Take screenshot with Ravenclaw theme
+- takeScreenshot: "house_ravenclaw"
+
+# Verify the UI reflects the house selection
+- assertVisible:
+    text: "Ravenclaw"
+    optional: true

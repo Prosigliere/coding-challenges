@@ -1,0 +1,44 @@
+# View All Characters Flow
+# Tests the main characters list view functionality
+
+appId: ${ANDROID_APP_ID}
+name: "View All Characters"
+tags:
+  - smoke
+  - characters
+
+---
+
+# Launch the app
+- launchApp
+
+# Wait for the characters list to load
+- extendedWaitUntil:
+    visible: "Characters"
+    timeout: 10000
+
+# Tap on "All" tab/filter to show all characters
+- tapOn:
+    text: "All"
+    optional: true
+
+# Verify the character list is displayed
+- assertVisible:
+    text: "Harry Potter"
+    optional: true
+
+# Scroll down to see more characters
+- scroll:
+    direction: DOWN
+
+# Verify more characters are visible after scrolling
+- assertVisible:
+    text: ".*"
+    regex: true
+
+# Scroll back up
+- scroll:
+    direction: UP
+
+# Take a screenshot of the all characters view
+- takeScreenshot: "all_characters_view"

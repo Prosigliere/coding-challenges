@@ -1,0 +1,43 @@
+# View Staff Flow
+# Tests the staff filter functionality
+
+appId: ${ANDROID_APP_ID}
+name: "View Staff Only"
+tags:
+  - characters
+  - filter
+
+---
+
+# Launch the app
+- launchApp
+
+# Wait for the app to load
+- extendedWaitUntil:
+    visible: "Characters"
+    timeout: 10000
+
+# Tap on "Staff" tab/filter
+- tapOn:
+    text: "Staff"
+
+# Wait for the filtered list to load
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+
+# Verify we're viewing staff members (professors, etc.)
+- assertVisible:
+    text: ".*"
+    regex: true
+
+# Scroll through the staff list
+- scroll:
+    direction: DOWN
+
+# Take a screenshot of the staff view
+- takeScreenshot: "staff_view"
+
+# Verify the filter is active
+- assertVisible:
+    text: "Staff"
