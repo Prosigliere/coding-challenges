@@ -1,7 +1,8 @@
-# Raw source data (Azure Senior DE challenge)
+# Raw source data (Senior DE challenges)
 
 These files are the **upstream SQL Server operational databases** for the
-[Senior Data Engineer (Azure / SQL Server) challenge](../data_engineer_azure.md).
+[Senior Data Engineer (Azure / SQL Server) challenge](../data_engineer_azure.md) and the
+[Senior Data Engineer (Data Platform Design) challenge](../data_engineer_design.md).
 
 This is the canonical challenge dataset (customers/orders/order_items + product
 catalogue) ported to T-SQL. You do **not** have to run anything — the files define the

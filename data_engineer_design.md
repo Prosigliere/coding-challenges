@@ -112,7 +112,7 @@ decisions. Management would like to answer:
 ## Available Data Sources
 
 To keep this self-contained, the **raw source data** is provided in the
-[`data_engineer_azure/`](./data_engineer_azure) folder. You do **not** need to stand up any
+[`data_engineer_assets/`](./data_engineer_assets) folder. You do **not** need to stand up any
 infrastructure — treat these as the shape and content of the upstream operational source
 databases (provided here in T-SQL as a concrete reference — the shape/content is what
 matters, not the dialect):
