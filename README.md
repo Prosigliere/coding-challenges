@@ -5,6 +5,7 @@ All Prosigliere coding challenges housed here.
 ## Challenges
 
 - [AI_ML_Challenge.md](AI_ML_Challenge.md) — Machine Learning: fall detection from IMU time-series sensor data.
+- [analytics_engineer.md](analytics_engineer.md) — Analytics Engineer: eCommerce data ingestion, dbt transformation, and BI/dashboard reporting.
 - [backend.md](backend.md) — Backend: RESTful blogging API (posts & comments).
 - [bi_analyst.md](bi_analyst.md) — Business Intelligence Analyst: eCommerce reporting, metric validation, and data storytelling on a seeded warehouse.
 - [data_engineer.md](data_engineer.md) — Data Engineer: eCommerce data warehouse design and Airflow ETL pipeline.
