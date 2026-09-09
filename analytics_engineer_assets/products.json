@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "category": "Electronics",
+    "description": "Premium noise-cancelling wireless headphones with 30-hour battery life",
+    "base_price": 89.99,
+    "currency": "USD"
+  },
+  {
+    "id": 2,
+    "name": "Smart Fitness Watch",
+    "category": "Electronics",
+    "description": "Advanced fitness tracker with heart rate monitoring and GPS",
+    "base_price": 299.99,
+    "currency": "USD"
+  },
+  {
+    "id": 3,
+    "name": "Portable Bluetooth Speaker",
+    "category": "Electronics",
+    "description": "Waterproof portable speaker with 360-degree sound",
+    "base_price": 356.25,
+    "currency": "USD"
+  },
+  {
+    "id": 4,
+    "name": "4K Webcam",
+    "category": "Electronics",
+    "description": "Ultra HD webcam with auto-focus and noise reduction",
+    "base_price": 367.25,
+    "currency": "USD"
+  },
+  {
+    "id": 5,
+    "name": "Wireless Charging Pad",
+    "category": "Electronics",
+    "description": "Fast wireless charger compatible with all Qi-enabled devices",
+    "base_price": 423.75,
+    "currency": "USD"
+  },
+  {
+    "id": 6,
+    "name": "Gaming Mechanical Keyboard",
+    "category": "Electronics",
+    "description": "RGB backlit mechanical keyboard with blue switches",
+    "base_price": 345.6,
+    "currency": "USD"
+  },
+  {
+    "id": 7,
+    "name": "Ergonomic Wireless Mouse",
+    "category": "Electronics",
+    "description": "Precision wireless mouse with ergonomic design",
+    "base_price": 189.99,
+    "currency": "USD"
+  },
+  {
+    "id": 8,
+    "name": "Tablet Stand Adjustable",
+    "category": "Electronics",
+    "description": "Universal adjustable stand for tablets and phones",
+    "base_price": 299.99,
+    "currency": "USD"
+  },
+  {
+    "id": 9,
+    "name": "USB-C Hub 7-in-1",
+    "category": "Electronics",
+    "description": "Multi-port hub with HDMI, USB 3.0, and SD card slots",
+    "base_price": 456.8,
+    "currency": "USD"
+  },
+  {
+    "id": 10,
+    "name": "Smartphone Camera Lens Kit",
+    "category": "Electronics",
+    "description": "3-in-1 lens kit with wide-angle, macro, and fisheye lenses",
+    "base_price": 423.55,
+    "currency": "USD"
+  },
+  {
+    "id": 11,
+    "name": "Organic Cotton T-Shirt",
+    "category": "Clothing",
+    "description": "Soft organic cotton t-shirt available in multiple colors",
+    "base_price": 289.45,
+    "currency": "USD"
+  },
+  {
+    "id": 12,
+    "name": "Denim Jacket Classic",
+    "category": "Clothing",
+    "description": "Timeless denim jacket with vintage wash finish",
+    "base_price": 72.91,
+    "currency": "USD"
+  },
+  {
+    "id": 13,
+    "name": "Running Shorts Athletic",
+    "category": "Clothing",
+    "description": "Lightweight athletic shorts with moisture-wicking fabric",
+    "base_price": 298.75,
+    "currency": "USD"
+  },
+  {
+    "id": 14,
+    "name": "Wool Blend Sweater",
+    "category": "Clothing",
+    "description": "Cozy wool blend sweater perfect for cold weather",
+    "base_price": 89.25,
+    "currency": "USD"
+  },
+  {
+    "id": 15,
+    "name": "Leather Ankle Boots",
+    "category": "Clothing",
+    "description": "Genuine leather ankle boots with comfortable sole",
+    "base_price": 78.25,
+    "currency": "USD"
+  },
+  {
+    "id": 16,
+    "name": "Cotton Hoodie Pullover",
+    "category": "Clothing",
+    "description": "Comfortable cotton hoodie with kangaroo pocket",
+    "base_price": 278.9,
+    "currency": "USD"
+  },
+  {
+    "id": 17,
+    "name": "Silk Scarf Luxury",
+    "category": "Clothing",
+    "description": "Premium silk scarf with elegant pattern design",
+    "base_price": 367.25,
+    "currency": "USD"
+  },
+  {
+    "id": 18,
+    "name": "Athletic Leggings",
+    "category": "Clothing",
+    "description": "High-waisted leggings with compression fit",
+    "base_price": 267.4,
+    "currency": "USD"
+  },
+  {
+    "id": 19,
+    "name": "Casual Button-Down Shirt",
+    "category": "Clothing",
+    "description": "Versatile button-down shirt suitable for work or casual wear",
+    "base_price": 199.99,
+    "currency": "USD"
+  },
+  {
+    "id": 20,
+    "name": "Winter Puffer Jacket",
+    "category": "Clothing",
+    "description": "Insulated puffer jacket with water-resistant coating",
+    "base_price": 298.7,
+    "currency": "USD"
+  },
+  {
+    "id": 21,
+    "name": "The Art of Data Science",
+    "category": "Books",
+    "description": "Comprehensive guide to modern data science techniques and applications",
+    "base_price": 298.45,
+    "currency": "USD"
+  },
+  {
+    "id": 22,
+    "name": "Mindfulness and Meditation",
+    "category": "Books",
+    "description": "Practical guide to incorporating mindfulness into daily life",
+    "base_price": 77.31,
+    "currency": "USD"
+  },
+  {
+    "id": 23,
+    "name": "Cooking Around the World",
+    "category": "Books",
+    "description": "International cookbook with recipes from 50 countries",
+    "base_price": 234.75,
+    "currency": "USD"
+  },
+  {
+    "id": 24,
+    "name": "Digital Photography Mastery",
+    "category": "Books",
+    "description": "Complete guide to digital photography for beginners and professionals",
+    "base_price": 234.85,
+    "currency": "USD"
+  },
+  {
+    "id": 25,
+    "name": "Sustainable Living Guide",
+    "category": "Books",
+    "description": "Practical tips for eco-friendly living and reducing environmental impact",
+    "base_price": 234.5,
+    "currency": "USD"
+  },
+  {
+    "id": 26,
+    "name": "Financial Planning Basics",
+    "category": "Books",
+    "description": "Essential guide to personal finance and investment strategies",
+    "base_price": 189.95,
+    "currency": "USD"
+  },
+  {
+    "id": 27,
+    "name": "Creative Writing Workshop",
+    "category": "Books",
+    "description": "Exercises and techniques for improving creative writing skills",
+    "base_price": 89.45,
+    "currency": "USD"
+  },
+  {
+    "id": 28,
+    "name": "Home Gardening Encyclopedia",
+    "category": "Books",
+    "description": "Complete guide to growing vegetables, herbs, and flowers at home",
+    "base_price": 98.76,
+    "currency": "USD"
+  },
+  {
+    "id": 29,
+    "name": "Machine Learning Fundamentals",
+    "category": "Books",
+    "description": "Introduction to machine learning concepts and algorithms",
+    "base_price": 245.9,
+    "currency": "USD"
+  },
+  {
+    "id": 30,
+    "name": "Travel Photography Tips",
+    "category": "Books",
+    "description": "Professional techniques for capturing stunning travel photos",
+    "base_price": 278.95,
+    "currency": "USD"
+  },
+  {
+    "id": 31,
+    "name": "Ceramic Plant Pot Set",
+    "category": "Home & Garden",
+    "description": "Set of 3 decorative ceramic pots with drainage holes",
+    "base_price": 278.6,
+    "currency": "USD"
+  },
+  {
+    "id": 32,
+    "name": "LED String Lights",
+    "category": "Home & Garden",
+    "description": "Warm white LED string lights perfect for indoor and outdoor use",
+    "base_price": 298.55,
+    "currency": "USD"
+  },
+  {
+    "id": 33,
+    "name": "Bamboo Cutting Board",
+    "category": "Home & Garden",
+    "description": "Eco-friendly bamboo cutting board with juice groove",
+    "base_price": 156.8,
+    "currency": "USD"
+  },
+  {
+    "id": 34,
+    "name": "Essential Oil Diffuser",
+    "category": "Home & Garden",
+    "description": "Ultrasonic aromatherapy diffuser with color-changing LED",
+    "base_price": 123.45,
+    "currency": "USD"
+  },
+  {
+    "id": 35,
+    "name": "Memory Foam Pillow",
+    "category": "Home & Garden",
+    "description": "Contoured memory foam pillow for better sleep support",
+    "base_price": 234.9,
+    "currency": "USD"
+  },
+  {
+    "id": 36,
+    "name": "Stainless Steel Water Bottle",
+    "category": "Home & Garden",
+    "description": "Insulated water bottle that keeps drinks cold for 24 hours",
+    "base_price": 48.57,
+    "currency": "USD"
+  },
+  {
+    "id": 37,
+    "name": "Microfiber Cleaning Cloths",
+    "category": "Home & Garden",
+    "description": "Pack of 12 ultra-soft microfiber cleaning cloths",
+    "base_price": 72.95,
+    "currency": "USD"
+  },
+  {
+    "id": 38,
+    "name": "Solar Garden Lights",
+    "category": "Home & Garden",
+    "description": "Set of 8 solar-powered LED garden pathway lights",
+    "base_price": 34.99,
+    "currency": "USD"
+  },
+  {
+    "id": 39,
+    "name": "Non-Stick Cookware Set",
+    "category": "Home & Garden",
+    "description": "10-piece non-stick cookware set with heat-resistant handles",
+    "base_price": 78.45,
+    "currency": "USD"
+  },
+  {
+    "id": 40,
+    "name": "Throw Blanket Cozy",
+    "category": "Home & Garden",
+    "description": "Ultra-soft fleece throw blanket perfect for couch or bed",
+    "base_price": 34.99,
+    "currency": "USD"
+  },
+  {
+    "id": 41,
+    "name": "Yoga Mat Premium",
+    "category": "Sports & Outdoors",
+    "description": "Non-slip yoga mat with extra cushioning and carrying strap",
+    "base_price": 48.6,
+    "currency": "USD"
+  },
+  {
+    "id": 42,
+    "name": "Camping Sleeping Bag",
+    "category": "Sports & Outdoors",
+    "description": "Lightweight sleeping bag rated for 3-season camping",
+    "base_price": 79.99,
+    "currency": "USD"
+  },
+  {
+    "id": 43,
+    "name": "Resistance Bands Set",
+    "category": "Sports & Outdoors",
+    "description": "Set of 5 resistance bands with different resistance levels",
+    "base_price": 48.6,
+    "currency": "USD"
+  },
+  {
+    "id": 44,
+    "name": "Hiking Backpack 40L",
+    "category": "Sports & Outdoors",
+    "description": "Durable hiking backpack with multiple compartments",
+    "base_price": 99.53,
+    "currency": "USD"
+  },
+  {
+    "id": 45,
+    "name": "Water Sports Goggles",
+    "category": "Sports & Outdoors",
+    "description": "Anti-fog swimming goggles with UV protection",
+    "base_price": 22.42,
+    "currency": "USD"
+  },
+  {
+    "id": 46,
+    "name": "Portable Camping Chair",
+    "category": "Sports & Outdoors",
+    "description": "Lightweight folding chair perfect for camping and outdoor events",
+    "base_price": 44.99,
+    "currency": "USD"
+  },
+  {
+    "id": 47,
+    "name": "Tennis Racket Professional",
+    "category": "Sports & Outdoors",
+    "description": "Professional-grade tennis racket with graphite frame",
+    "base_price": 63.15,
+    "currency": "USD"
+  },
+  {
+    "id": 48,
+    "name": "Bike Helmet Safety",
+    "category": "Sports & Outdoors",
+    "description": "Lightweight bike helmet with adjustable fit system",
+    "base_price": 63.15,
+    "currency": "USD"
+  },
+  {
+    "id": 49,
+    "name": "Fishing Rod Combo",
+    "category": "Sports & Outdoors",
+    "description": "Complete fishing rod and reel combo for beginners",
+    "base_price": 94.95,
+    "currency": "USD"
+  },
+  {
+    "id": 50,
+    "name": "Running Armband Phone",
+    "category": "Sports & Outdoors",
+    "description": "Adjustable armband for smartphones during workouts",
+    "base_price": 94.88,
+    "currency": "USD"
+  },
+  {
+    "id": 51,
+    "name": "Organic Face Moisturizer",
+    "category": "Beauty & Personal Care",
+    "description": "Natural face moisturizer with hyaluronic acid and vitamin E",
+    "base_price": 34.99,
+    "currency": "USD"
+  },
+  {
+    "id": 52,
+    "name": "Electric Toothbrush",
+    "category": "Beauty & Personal Care",
+    "description": "Rechargeable electric toothbrush with multiple cleaning modes",
+    "base_price": 356.75,
+    "currency": "USD"
+  },
+  {
+    "id": 53,
+    "name": "Hair Styling Tool Set",
+    "category": "Beauty & Personal Care",
+    "description": "3-in-1 hair styling tool with curling, straightening, and wave functions",
+    "base_price": 423.4,
+    "currency": "USD"
+  },
+  {
+    "id": 54,
+    "name": "Vitamin C Serum",
+    "category": "Beauty & Personal Care",
+    "description": "Anti-aging vitamin C serum for brighter, smoother skin",
+    "base_price": 24.99,
+    "currency": "USD"
+  },
+  {
+    "id": 55,
+    "name": "Makeup Brush Set",
+    "category": "Beauty & Personal Care",
+    "description": "Professional makeup brush set with 12 brushes and carrying case",
+    "base_price": 94.85,
+    "currency": "USD"
+  },
+  {
+    "id": 56,
+    "name": "Beard Grooming Kit",
+    "category": "Beauty & Personal Care",
+    "description": "Complete beard care kit with oil, balm, and wooden comb",
+    "base_price": 94.8,
+    "currency": "USD"
+  },
+  {
+    "id": 57,
+    "name": "Nail Care Set",
+    "category": "Beauty & Personal Care",
+    "description": "Professional nail care set with files, clippers, and cuticle tools",
+    "base_price": 19.99,
+    "currency": "USD"
+  },
+  {
+    "id": 58,
+    "name": "Body Lotion Luxury",
+    "category": "Beauty & Personal Care",
+    "description": "Moisturizing body lotion with shea butter and natural oils",
+    "base_price": 99.3,
+    "currency": "USD"
+  },
+  {
+    "id": 59,
+    "name": "Facial Cleansing Brush",
+    "category": "Beauty & Personal Care",
+    "description": "Sonic facial cleansing brush for deep pore cleaning",
+    "base_price": 139.2,
+    "currency": "USD"
+  },
+  {
+    "id": 60,
+    "name": "Hair Mask Treatment",
+    "category": "Beauty & Personal Care",
+    "description": "Deep conditioning hair mask for damaged and dry hair",
+    "base_price": 94.95,
+    "currency": "USD"
+  },
+  {
+    "id": 61,
+    "name": "Building Blocks Creative Set",
+    "category": "Toys & Games",
+    "description": "Educational building blocks set for developing creativity and motor skills",
+    "base_price": 34.99,
+    "currency": "USD"
+  },
+  {
+    "id": 62,
+    "name": "Board Game Strategy",
+    "category": "Toys & Games",
+    "description": "Award-winning strategy board game for 2-4 players",
+    "base_price": 44.99,
+    "currency": "USD"
+  },
+  {
+    "id": 63,
+    "name": "Remote Control Drone",
+    "category": "Toys & Games",
+    "description": "Easy-to-fly drone with HD camera and smartphone control",
+    "base_price": 99.99,
+    "currency": "USD"
+  },
+  {
+    "id": 64,
+    "name": "Puzzle 1000 Pieces",
+    "category": "Toys & Games",
+    "description": "Challenging 1000-piece jigsaw puzzle with beautiful landscape image",
+    "base_price": 23.71,
+    "currency": "USD"
+  },
+  {
+    "id": 65,
+    "name": "Art Supplies Kit Kids",
+    "category": "Toys & Games",
+    "description": "Complete art kit with crayons, markers, colored pencils, and paper",
+    "base_price": 29.99,
+    "currency": "USD"
+  },
+  {
+    "id": 66,
+    "name": "Science Experiment Kit",
+    "category": "Toys & Games",
+    "description": "Educational science kit with 20+ safe experiments for kids",
+    "base_price": 39.99,
+    "currency": "USD"
+  },
+  {
+    "id": 67,
+    "name": "Musical Keyboard Mini",
+    "category": "Toys & Games",
+    "description": "37-key mini keyboard with built-in songs and learning modes",
+    "base_price": 19.73,
+    "currency": "USD"
+  },
+  {
+    "id": 68,
+    "name": "Action Figure Collectible",
+    "category": "Toys & Games",
+    "description": "Highly detailed action figure with multiple points of articulation",
+    "base_price": 20.63,
+    "currency": "USD"
+  },
+  {
+    "id": 69,
+    "name": "Card Game Family Fun",
+    "category": "Toys & Games",
+    "description": "Fast-paced card game perfect for family game nights",
+    "base_price": 37.96,
+    "currency": "USD"
+  },
+  {
+    "id": 70,
+    "name": "Educational Tablet Kids",
+    "category": "Toys & Games",
+    "description": "Kid-friendly tablet with educational games and parental controls",
+    "base_price": 79.99,
+    "currency": "USD"
+  },
+  {
+    "id": 71,
+    "name": "Car Phone Mount",
+    "category": "Automotive",
+    "description": "Universal car phone mount with 360-degree rotation",
+    "base_price": 41.96,
+    "currency": "USD"
+  },
+  {
+    "id": 72,
+    "name": "Tire Pressure Gauge",
+    "category": "Automotive",
+    "description": "Digital tire pressure gauge with LED display",
+    "base_price": 24.99,
+    "currency": "USD"
+  },
+  {
+    "id": 73,
+    "name": "Car Air Freshener Set",
+    "category": "Automotive",
+    "description": "Long-lasting car air fresheners in assorted scents",
+    "base_price": 46.96,
+    "currency": "USD"
+  },
+  {
+    "id": 74,
+    "name": "Emergency Car Kit",
+    "category": "Automotive",
+    "description": "Complete emergency kit with jumper cables, flashlight, and tools",
+    "base_price": 17.69,
+    "currency": "USD"
+  },
+  {
+    "id": 75,
+    "name": "Dashboard Camera HD",
+    "category": "Automotive",
+    "description": "Full HD dashboard camera with night vision and loop recording",
+    "base_price": 39.11,
+    "currency": "USD"
+  },
+  {
+    "id": 76,
+    "name": "Car Seat Organizer",
+    "category": "Automotive",
+    "description": "Multi-pocket seat organizer for storing car essentials",
+    "base_price": 22.45,
+    "currency": "USD"
+  },
+  {
+    "id": 77,
+    "name": "Bluetooth Car Adapter",
+    "category": "Automotive",
+    "description": "Wireless Bluetooth adapter for hands-free calling and music",
+    "base_price": 41.98,
+    "currency": "USD"
+  },
+  {
+    "id": 78,
+    "name": "Car Cleaning Kit",
+    "category": "Automotive",
+    "description": "Complete car cleaning kit with microfiber cloths and cleaning solutions",
+    "base_price": 39.21,
+    "currency": "USD"
+  },
+  {
+    "id": 79,
+    "name": "Sunshade Windshield",
+    "category": "Automotive",
+    "description": "Reflective windshield sunshade for UV protection and cooling",
+    "base_price": 16.99,
+    "currency": "USD"
+  },
+  {
+    "id": 80,
+    "name": "Car Floor Mats",
+    "category": "Automotive",
+    "description": "All-weather rubber floor mats for maximum protection",
+    "base_price": 49.99,
+    "currency": "USD"
+  },
+  {
+    "id": 81,
+    "name": "Dog Toy Rope",
+    "category": "Pet Supplies",
+    "description": "Durable rope toy for dogs with natural cotton fibers",
+    "base_price": 19.59,
+    "currency": "USD"
+  },
+  {
+    "id": 82,
+    "name": "Cat Scratching Post",
+    "category": "Pet Supplies",
+    "description": "Tall scratching post with sisal rope and hanging toys",
+    "base_price": 17.68,
+    "currency": "USD"
+  },
+  {
+    "id": 83,
+    "name": "Pet Food Bowl Set",
+    "category": "Pet Supplies",
+    "description": "Stainless steel food and water bowl set with non-slip base",
+    "base_price": 16.19,
+    "currency": "USD"
+  },
+  {
+    "id": 84,
+    "name": "Dog Leash Retractable",
+    "category": "Pet Supplies",
+    "description": "Retractable dog leash with comfortable grip handle",
+    "base_price": 19.99,
+    "currency": "USD"
+  },
+  {
+    "id": 85,
+    "name": "Cat Litter Mat",
+    "category": "Pet Supplies",
+    "description": "Large litter mat that traps litter and protects floors",
+    "base_price": 17.43,
+    "currency": "USD"
+  },
+  {
+    "id": 86,
+    "name": "Pet Carrier Soft",
+    "category": "Pet Supplies",
+    "description": "Soft-sided pet carrier approved for airline travel",
+    "base_price": 16.77,
+    "currency": "USD"
+  },
+  {
+    "id": 87,
+    "name": "Dog Training Treats",
+    "category": "Pet Supplies",
+    "description": "Natural training treats made with real chicken and vegetables",
+    "base_price": 15.49,
+    "currency": "USD"
+  },
+  {
+    "id": 88,
+    "name": "Pet Grooming Brush",
+    "category": "Pet Supplies",
+    "description": "Self-cleaning pet brush for removing loose fur and tangles",
+    "base_price": 22.99,
+    "currency": "USD"
+  },
+  {
+    "id": 89,
+    "name": "Automatic Pet Feeder",
+    "category": "Pet Supplies",
+    "description": "Programmable automatic feeder with portion control",
+    "base_price": 17.99,
+    "currency": "USD"
+  },
+  {
+    "id": 90,
+    "name": "Pet Bed Orthopedic",
+    "category": "Pet Supplies",
+    "description": "Memory foam pet bed with removable washable cover",
+    "base_price": 69.99,
+    "currency": "USD"
+  },
+  {
+    "id": 91,
+    "name": "Desk Organizer Bamboo",
+    "category": "Office Supplies",
+    "description": "Eco-friendly bamboo desk organizer with multiple compartments",
+    "base_price": 34.99,
+    "currency": "USD"
+  },
+  {
+    "id": 92,
+    "name": "Ergonomic Office Chair",
+    "category": "Office Supplies",
+    "description": "Adjustable office chair with lumbar support and breathable mesh",
+    "base_price": 199.99,
+    "currency": "USD"
+  },
+  {
+    "id": 93,
+    "name": "Standing Desk Converter",
+    "category": "Office Supplies",
+    "description": "Height-adjustable desk converter for healthier working",
+    "base_price": 149.99,
+    "currency": "USD"
+  },
+  {
+    "id": 94,
+    "name": "Wireless Presenter Remote",
+    "category": "Office Supplies",
+    "description": "Laser pointer and presentation remote with USB receiver",
+    "base_price": 29.99,
+    "currency": "USD"
+  },
+  {
+    "id": 95,
+    "name": "Document Shredder",
+    "category": "Office Supplies",
+    "description": "Cross-cut paper shredder for secure document disposal",
+    "base_price": 89.99,
+    "currency": "USD"
+  },
+  {
+    "id": 96,
+    "name": "Whiteboard Magnetic",
+    "category": "Office Supplies",
+    "description": "Large magnetic whiteboard with aluminum frame and marker tray",
+    "base_price": 79.99,
+    "currency": "USD"
+  },
+  {
+    "id": 97,
+    "name": "Printer Paper Premium",
+    "category": "Office Supplies",
+    "description": "High-quality multipurpose printer paper, 500 sheets",
+    "base_price": 24.99,
+    "currency": "USD"
+  },
+  {
+    "id": 98,
+    "name": "Stapler Heavy Duty",
+    "category": "Office Supplies",
+    "description": "Heavy-duty stapler that can handle up to 100 sheets",
+    "base_price": 34.99,
+    "currency": "USD"
+  },
+  {
+    "id": 99,
+    "name": "File Cabinet 4-Drawer",
+    "category": "Office Supplies",
+    "description": "Locking 4-drawer file cabinet for letter-size documents",
+    "base_price": 299.99,
+    "currency": "USD"
+  },
+  {
+    "id": 100,
+    "name": "Desk Lamp LED",
+    "category": "Office Supplies",
+    "description": "Adjustable LED desk lamp with USB charging port",
+    "base_price": 49.99,
+    "currency": "USD"
+  }
+]
